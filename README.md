@@ -1,5 +1,7 @@
 ### Spring Data JPA Articles that are also part of the e-book
 
+From https://github.com/eugenp/tutorials copyright Baeldung
+
 This module contains articles about Spring Data JPA that are also part of an Ebook.
 
 
