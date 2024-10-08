@@ -4,7 +4,7 @@
 This demo reuses the excellent Spring Data JPA example from Baeldung. The original readme with links to the articles
 are included below.
 
-This repo adds a demo of using Spring AOP to add metrics about method execution time around spring-jpa and servies. .
+This repo adds a demo of using Spring AOP to add metrics about method execution time around spring-jpa and services. 
 The context is that you have an existing modern spring application and would like to log statics about 
 method timings and counts. This allows you to understand in a complex application where time is being spent. 
 
