@@ -8,8 +8,10 @@ This repo adds a demo of using Spring AOP to add metrics about method execution 
 The context is that you have an existing modern spring application and would like to log statics about 
 method timings and counts. This allows you to understand in a complex application where time is being spent. 
 
-Note that Hibernate can be configured to log slow queries which is great. Yet you might find that you have 
+*Note* that Hibernate can be configured to log slow queries which is great. Yet you might find that you have 
 services that are making a lot of calls that are themselves not slow yet are adding up to a lot of time. 
+
+*Note* You can add a `@Timed` query of other annotations to your own methods. Yet spring will generate some repo methodsfor yo. This demo uses an aspect that will log metrics for the generated spring-jpa repositories. 
 
 If you run the integration tests you will see that the metrics are logged on shutdown else every 15 minutes as: 
 
