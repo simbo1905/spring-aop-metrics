@@ -70,6 +70,8 @@ public class MethodTimingAspect {
 }
 ```
 
+Everthing below is the original readme from the Baeldung demo app which is over at https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa-simple
+
 ### Spring Data JPA Articles that are also part of the e-book
 
 From https://github.com/eugenp/tutorials copyright Baeldung
