@@ -28,4 +28,9 @@ public class FooServiceIntegrationTest {
     public final void whenInvalidEntityIsCreated_thenDataException() {
         service.create(new Foo());
     }
+
+    @Test
+    public final void validServiceUsage() {
+        service.create(new Foo("bar"));
+    }
 }

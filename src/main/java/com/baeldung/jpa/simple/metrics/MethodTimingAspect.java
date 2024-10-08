@@ -42,17 +42,16 @@ public class MethodTimingAspect {
   }
 
   @Around("execution(* com.baeldung.jpa..*.*(..))")
-  public Object measureMethodExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
-    long startTime = System.currentTimeMillis();
-    Object result = joinPoint.proceed();
-    long executionTime = System.currentTimeMillis() - startTime;
+  public Object measureMethodExecutionTime(final ProceedingJoinPoint joinPoint) throws Throwable {
+    final long startTime = System.currentTimeMillis();
+    final Object result = joinPoint.proceed();
+    final long executionTime = System.currentTimeMillis() - startTime;
 
-    String className = joinPoint.getSignature().getDeclaringTypeName();
-    String methodName = joinPoint.getSignature().getName();
-    String histogramName = className + "." + methodName;
+    final String className = joinPoint.getSignature().getDeclaringTypeName();
+    final String methodName = joinPoint.getSignature().getName();
+    final String histogramName = className + "." + methodName;
 
-    meterRegistry.histogram(histogramName)
-        .update(executionTime);
+    meterRegistry.histogram(histogramName).update(executionTime);
 
     log.trace("Duration was {} ms for {}", executionTime, histogramName);
 
